@@ -1,8 +1,6 @@
 const server = require('./api/server');
+const cors = require('cors');
 const PORT = process.env.PORT || 5000;
-
-
-
 server.get('/', (req, res) => {
     res.status(200).send('<h1>flatten the curve API</h1>')
 })

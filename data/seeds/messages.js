@@ -15,6 +15,7 @@ exports.seed = function (knex) {
             lng: 38.136671,
           }),
           userUUID: "007e8194-06a0-425c-a74a-3d18124b5d68",
+          timeOfPost: new Date(),
           postField: "Donec semper sapien a libero.",
           image:
             "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACzSURBVCjPY/jPgB8yEKmg0aHxf93/6jPlR4vP5P/I+p9yFMOEuvP7/pedKerJ7cmYnNwTOx9DQaVB9/8J/3McILyw/VjcUFA//3/a/QQBPI5MOT/7f2QBHgWxCRHvg2bhVBAjEHY/8DaecAhd73/GswfCNvmPoSA4we+8x2kQywLoTP33aAqCDHzeu79xrLepN+83uq/3Xwvdm94Jrvsd9lvtN91vuF93v+Z+tX5S44ICBQA4egHkwuNCKQAAAABJRU5ErkJggg==",
@@ -28,6 +29,7 @@ exports.seed = function (knex) {
           }),
           userUUID: "9b84de38-7b5e-4532-97ff-25c3df444518",
           postField: "Maecenas ut massa quis augue luctus tincidunt.",
+          timeOfPost: new Date(),
           image:
             "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADGSURBVDjLY/j//z8DJZhh1ADsBhyJkKs44Mv3cI8Ty7+drsyPgLiCaAOOhMuVXyy2+Pl9a+//f9d2/P+6ouj/6WzdP7ucWXKJMmCnC/Pdb0DN/yf5/v9fLvj/f5vi/9ddDv+B4veIMgDk7H9n1/1HBu/rJf6DxIlzgSvz4y9zk///B2r6Ucbw/x0QP8xg/g8Uf0KUAYfDpRpOpqj+flau+P9VJev/uymM//f6svzZ4cpcRXwshMtWAG28D42Fx7g0jyZlCAYAAc7hFvdEsKgAAAAASUVORK5CYII=",
         },
@@ -39,6 +41,7 @@ exports.seed = function (knex) {
             lng: 121.0075554,
           }),
           userUUID: "532b3c9d-c59f-428a-8674-d9e03e2dc4fe",
+          timeOfPost: new Date(),
           postField:
             "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
           image:

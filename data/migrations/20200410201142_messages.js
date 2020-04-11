@@ -7,6 +7,7 @@ exports.up = function(knex) {
       table.json("geoLock").notNullable();
       table.string("userUUID", 255).notNullable();
       table.text("postField").notNullable();
+      table.datetime("timeOfPost").notNullable();
       table.text("image");
   })
 };

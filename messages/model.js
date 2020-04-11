@@ -2,14 +2,14 @@ const db = require("../data/connection");
 const st = require("../utils/knex-gis");
 
 const find = (query) => {
-  const { radius, latitude, longitude } = query;
-  if (radius && latitude && longitude) {
+  const { maxlat, maxlng, minlat, minlng, clat, clng } = query;
+  if (maxlat && maxlng && minlat && minlng) {
     return db("messages")
       .select(
         st
           .distance(
             "coordinates",
-            st.geography(st.makePoint(longitude, latitude))
+            st.geography(st.makePoint(clng, clat))
           )
           .as("distanceAway"),
         "id",
@@ -18,14 +18,15 @@ const find = (query) => {
         st.y("coordinates").as("latitude"),
         "geoLock",
         "userUUID",
+        "timeOfPost",
         "postField",
         "image"
       )
       .where(
         st.dwithin(
           "coordinates",
-          st.geography(st.makePoint(longitude, latitude)),
-          radius
+          st.geography(st.makePoint(clng, clat)),
+          st.distance(st.geography(st.makePoint(clng, clat)), st.geography(st.makePoint(minlng, maxlat)))
         )
       );
   } else {
